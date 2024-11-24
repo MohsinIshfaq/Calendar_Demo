@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Bold.otf">
+            <string>Gilroy-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIMonthSubViewController" customModule="Cleanware" customModuleProvider="target">
+            <connections>
+                <outlet property="constrainForHeight" destination="fsT-5i-uoJ" id="lsF-Y0-AGN"/>
+                <outlet property="customTable" destination="MET-mt-xSt" id="cpo-v0-aPy"/>
+                <outlet property="lblChoose" destination="u6I-BW-9X1" id="XhS-aM-uk9"/>
+                <outlet property="view" destination="JdE-Vi-dnh" id="f0C-hQ-Hav"/>
+                <outlet property="viewForMonths" destination="i9d-XB-fmr" id="0dz-5j-L2U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JdE-Vi-dnh">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0i-nf-hk7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="onClickBackground:" destination="-1" eventType="touchUpInside" id="s4I-jo-9Dj"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="746" verticalCompressionResistancePriority="746" image="img_backAddContact" translatesAutoresizingMaskIntoConstraints="NO" id="ylg-YV-Qzp">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9d-XB-fmr">
+                    <rect key="frame" x="80" y="22" width="160" height="100"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db2-em-fy1">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Month :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6I-BW-9X1">
+                                    <rect key="frame" x="40.5" y="16" width="79" height="13"/>
+                                    <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="u6I-BW-9X1" firstAttribute="centerX" secondItem="Db2-em-fy1" secondAttribute="centerX" id="AER-HL-C7g"/>
+                                <constraint firstItem="u6I-BW-9X1" firstAttribute="centerY" secondItem="Db2-em-fy1" secondAttribute="centerY" id="Jya-i5-LHa"/>
+                                <constraint firstAttribute="height" constant="45" id="NHP-eO-QEd"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MET-mt-xSt">
+                            <rect key="frame" x="0.0" y="45" width="160" height="55"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="pzu-E3-Ljm"/>
+                                <outlet property="delegate" destination="-1" id="FRx-Aq-Dgn"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MET-mt-xSt" secondAttribute="bottom" id="LFY-rd-CMw"/>
+                        <constraint firstItem="MET-mt-xSt" firstAttribute="top" secondItem="Db2-em-fy1" secondAttribute="bottom" id="NSt-er-TrI"/>
+                        <constraint firstItem="Db2-em-fy1" firstAttribute="leading" secondItem="i9d-XB-fmr" secondAttribute="leading" id="WE3-Cz-6iH"/>
+                        <constraint firstItem="MET-mt-xSt" firstAttribute="leading" secondItem="i9d-XB-fmr" secondAttribute="leading" id="ey5-NB-Q3k"/>
+                        <constraint firstAttribute="height" priority="750" constant="100" id="fsT-5i-uoJ"/>
+                        <constraint firstItem="Db2-em-fy1" firstAttribute="top" secondItem="i9d-XB-fmr" secondAttribute="top" id="mMg-Gg-Ogu"/>
+                        <constraint firstAttribute="trailing" secondItem="MET-mt-xSt" secondAttribute="trailing" id="nXO-aQ-XJV"/>
+                        <constraint firstAttribute="trailing" secondItem="Db2-em-fy1" secondAttribute="trailing" id="ugM-Jt-jBS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="QvE-LY-w44"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="i9d-XB-fmr" firstAttribute="centerX" secondItem="JdE-Vi-dnh" secondAttribute="centerX" id="A4v-Bl-bJZ"/>
+                <constraint firstAttribute="bottom" secondItem="P0i-nf-hk7" secondAttribute="bottom" id="DdE-q4-j4X"/>
+                <constraint firstItem="QvE-LY-w44" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="i9d-XB-fmr" secondAttribute="bottom" constant="20" id="HgK-Ot-6xo"/>
+                <constraint firstAttribute="trailing" secondItem="P0i-nf-hk7" secondAttribute="trailing" id="Jtb-zg-AKn"/>
+                <constraint firstItem="P0i-nf-hk7" firstAttribute="top" secondItem="JdE-Vi-dnh" secondAttribute="top" id="OoQ-35-fEz"/>
+                <constraint firstItem="ylg-YV-Qzp" firstAttribute="leading" secondItem="JdE-Vi-dnh" secondAttribute="leading" id="QZn-Kz-fpH"/>
+                <constraint firstItem="P0i-nf-hk7" firstAttribute="leading" secondItem="JdE-Vi-dnh" secondAttribute="leading" id="Qvr-5B-dr9"/>
+                <constraint firstItem="i9d-XB-fmr" firstAttribute="width" secondItem="ylg-YV-Qzp" secondAttribute="width" multiplier="0.5" id="Ucw-bq-kbg"/>
+                <constraint firstItem="ylg-YV-Qzp" firstAttribute="top" secondItem="JdE-Vi-dnh" secondAttribute="top" id="bZr-5J-peF"/>
+                <constraint firstAttribute="bottom" secondItem="ylg-YV-Qzp" secondAttribute="bottom" id="dIX-Ny-dl4"/>
+                <constraint firstItem="i9d-XB-fmr" firstAttribute="top" secondItem="QvE-LY-w44" secondAttribute="top" priority="250" constant="2" id="pdx-Tw-JRC"/>
+                <constraint firstAttribute="trailing" secondItem="ylg-YV-Qzp" secondAttribute="trailing" id="s05-pM-ibO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="56" y="48.575712143928037"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_backAddContact" width="1150" height="2208"/>
+    </resources>
+</document>

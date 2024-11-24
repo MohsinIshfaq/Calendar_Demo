@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "img_arrow_right.png",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "img_arrow_right~ipad.png",
+      "idiom" : "ipad"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-SemiBold.otf">
+            <string>Gilroy-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dSp-bk-4lV" customClass="UIJTItemCell" customModule="Microbizz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="258"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z58-kw-R9S">
+                    <rect key="frame" x="179" y="162" width="0.0" height="16"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="W8G-yq-03K"/>
+                        <constraint firstAttribute="height" constant="16" id="pwE-DE-iwZ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RIe-4A-WDH">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="dSp-bk-4lV" id="Dxj-X8-UGK"/>
+                        <outlet property="delegate" destination="dSp-bk-4lV" id="Fhs-sZ-fum"/>
+                    </connections>
+                </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMk-me-4Y0" customClass="AnimationView" customModule="Microbizz" customModuleProvider="target">
+                    <rect key="frame" x="138" y="88" width="82" height="82"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-wL-GPF">
+                            <rect key="frame" x="0.0" y="73.5" width="82" height="8.5"/>
+                            <color key="backgroundColor" red="0.72941176470588232" green="0.97254901960784312" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="8.5" id="xk9-kh-wvU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="qoS-wL-GPF" firstAttribute="leading" secondItem="TMk-me-4Y0" secondAttribute="leading" id="Drh-JY-6Mf"/>
+                        <constraint firstAttribute="width" secondItem="TMk-me-4Y0" secondAttribute="height" multiplier="1:1" id="d3k-4F-v3n"/>
+                        <constraint firstAttribute="trailing" secondItem="qoS-wL-GPF" secondAttribute="trailing" id="ed0-gT-5NA"/>
+                        <constraint firstAttribute="bottom" secondItem="qoS-wL-GPF" secondAttribute="bottom" id="fgl-8T-65G"/>
+                        <constraint firstAttribute="height" constant="20" id="kct-x0-Cq3"/>
+                        <constraint firstAttribute="width" constant="20" id="o5r-Bs-8Sv"/>
+                        <constraint firstAttribute="height" constant="82" id="wvy-1W-bJX"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="o5r-Bs-8Sv"/>
+                            <exclude reference="kct-x0-Cq3"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwg-Sl-YSK">
+                    <rect key="frame" x="173" y="109.5" width="12" height="39"/>
+                    <fontDescription key="fontDescription" name="Gilroy-SemiBold" family="Gilroy" pointSize="32"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.027450980392156862" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="itX-Ua-klw"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="z58-kw-R9S" firstAttribute="centerY" secondItem="TMk-me-4Y0" secondAttribute="bottom" id="EO2-pz-0e4"/>
+                <constraint firstItem="Iwg-Sl-YSK" firstAttribute="centerX" secondItem="dSp-bk-4lV" secondAttribute="centerX" id="JNM-W9-oua"/>
+                <constraint firstItem="Iwg-Sl-YSK" firstAttribute="centerY" secondItem="dSp-bk-4lV" secondAttribute="centerY" id="JpQ-qM-d0q"/>
+                <constraint firstItem="TMk-me-4Y0" firstAttribute="centerX" secondItem="dSp-bk-4lV" secondAttribute="centerX" id="a6D-Rz-Oid"/>
+                <constraint firstItem="z58-kw-R9S" firstAttribute="centerX" secondItem="TMk-me-4Y0" secondAttribute="centerX" id="hLU-ki-WXw"/>
+                <constraint firstItem="TMk-me-4Y0" firstAttribute="centerY" secondItem="dSp-bk-4lV" secondAttribute="centerY" id="owQ-gb-zjf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                    <integer key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="ViewForBottomIndicator" destination="qoS-wL-GPF" id="fZP-Yd-n4d"/>
+                <outlet property="constrainForCollectionWidth" destination="W8G-yq-03K" id="1nM-TO-19W"/>
+                <outlet property="customCollectionView" destination="z58-kw-R9S" id="w75-KA-s7E"/>
+                <outlet property="dayLabel" destination="Iwg-Sl-YSK" id="DuE-nh-Ueh"/>
+                <outlet property="selectedView" destination="TMk-me-4Y0" id="zzM-Bl-yCj"/>
+            </connections>
+            <point key="canvasLocation" x="-205.79710144927537" y="385.04464285714283"/>
+        </view>
+    </objects>
+</document>

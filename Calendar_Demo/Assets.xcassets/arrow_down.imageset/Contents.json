@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "1_0010_right-arrow-copy.png",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "arrow_down.png",
+      "idiom" : "ipad"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
